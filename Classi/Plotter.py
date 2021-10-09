@@ -45,6 +45,17 @@ class Plotter:
         return self.error
 
     def plot_setting(self, reset_figure=False, new_figure=False, title='Titolo', x_label='X', y_label='Y', label_legend='linea1'):
+        """
+        Set graph figures
+
+        :param reset_figure: True=clear plotter figures
+        :param new_figure: True=not update but add z new figure
+        :param title: grapg title
+        :param x_label: X axies label
+        :param y_label: Y axies label
+        :param label_legend: graph figure description
+        :return: error code. 0=OK
+        """
         try:
             if reset_figure:  # if reset --> clear all figure and start with clear graph
                 plotter.figure().clear()
